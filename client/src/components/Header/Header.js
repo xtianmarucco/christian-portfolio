@@ -23,7 +23,7 @@ const Header = () => (
         <DiCssdeck size="3rem" /> <Span >Portfolio</Span>
       </Link>
     </Div1>
-    {/* <Div2>
+    <Div2>
       <li>
         <Link href="#projects">
           <NavLink>Projects</NavLink>
@@ -39,7 +39,7 @@ const Header = () => (
          <NavLink>About</NavLink>
         </Link>
       </li>
-    </Div2> */}
+    </Div2>
     <Div3>
       <SocialIcons>
         <AiFillGithub fill="#52d053" size="2.5rem"></AiFillGithub>

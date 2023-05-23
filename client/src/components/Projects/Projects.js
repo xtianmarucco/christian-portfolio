@@ -1,9 +1,9 @@
 import React from "react";
 import { useState } from "react";
+import { motion } from "framer-motion"
 
 import {
-  BlogCardWrapper,
-  CardInfoWraper,
+
   BlogCard,
   CardInfo,
   ExternalLinks,
@@ -41,7 +41,6 @@ const Projects = () => {
       <SectionTitle main>Projects</SectionTitle>
       <GridContainer>
         {projects.map(({ image, title, description, id, tags }) => (
-        
             <BlogCard>
               <Img src={image} />
               <TitleContent title>

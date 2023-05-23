@@ -29,14 +29,7 @@ export const BlogCardWrapper = styled.div`
     // transform: scale(1.1); /* Increase the scale to make the card larger on hover */
   }
 `;
-const CardInfoWraper = styled.div`
-  /* Styles for CardInfo */
-  transition: transform 0.3s ease;
 
-  ${BlogCardWrapper}:hover & {
-    transform: translateY(100%); /* Slide down the CardInfo when BlogCard is hovered */
-  }
-`;
 export const BlogCard = styled.div`
   border-radius: 10px;
   box-shadow: 3px 3px 20px rgba(80, 78, 78, 0.5);

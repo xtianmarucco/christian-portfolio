@@ -2,7 +2,7 @@ export const projects = [
   {
     title: 'Devlights website',
     description: "Using React, Node.js, Express & MongoDB you'll learn how to build a Full Stack MERN Application - from start to finish. The App is called Memories and it is a simple social media app that allows users to post interesting events that happened in their lives.",
-      image: '/images/img1.png',
+      image: './images/img1.png',
       tags: ['Mongo', 'Express', 'React', 'Node'],
     source: 'https://google.com',
     visit: 'https://devlights.com/',
@@ -40,7 +40,7 @@ export const projects = [
 export const TimeLineData = [
   { year: 2017, text: 'Started my journey, coding for fun and learning from my programmer friends', },
   { year: 2018, text: 'Started as a trainee at Circulo Agencia', },
-  { year: 2019, text: 'Landed my first full-time gig as a front-end developer', },
+  { year: 2019, text: 'Landed my first full-time gig as a front-end developer at Devlights', },
   { year: 2021, text: 'Started working at Baufest on a FinTech project', },
   { year: 2023, text: 'Currently working as a contractor at Saffire', },
 ];
