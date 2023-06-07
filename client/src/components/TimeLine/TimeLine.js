@@ -3,6 +3,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import { CarouselButton, CarouselButtonDot, CarouselButtons, CarouselContainer, CarouselItem, CarouselItemImg, CarouselItemText, CarouselItemTitle, CarouselMobileScrollNode } from './TimeLineStyles';
 import { Section, SectionDivider, SectionText, SectionTitle } from '../../styles/GlobalComponents';
 import { TimeLineData } from '../../constants/constants';
+import DownloadCv from '../DownloadCvButton/DownloadCv';
 
 const TOTAL_CAROUSEL_COUNT = TimeLineData.length;
 
@@ -44,7 +45,8 @@ const Timeline = () => {
 
   return (
     <Section id="about">
-      <SectionTitle>About Me</SectionTitle>
+      <SectionDivider></SectionDivider>
+      <SectionTitle main >About Me</SectionTitle>
       <SectionText>
       The purpose of JavaScript Mastery is to help aspiring and established developers to take their development skills to the next level and build awesome apps.
       </SectionText>
@@ -112,7 +114,11 @@ const Timeline = () => {
           );
         })}
       </CarouselButtons>
-      <SectionDivider />
+      <br></br>
+
+      <DownloadCv>
+
+      </DownloadCv>
     </Section>
   );
 };
