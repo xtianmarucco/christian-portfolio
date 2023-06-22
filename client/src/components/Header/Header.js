@@ -20,7 +20,7 @@ const Header = () => (
         href="#"
         style={{ display: "flex", aligntItems: "center", color: "white" }}
       >
-        <DiCssdeck size="3rem" /> <Span >Portfolio</Span>
+        <DiCssdeck size="3rem" /> <Span >Hi there</Span>
       </Link>
     </Div1>
     <Div2>
@@ -30,13 +30,18 @@ const Header = () => (
         </Link>
       </li>
       <li>
-        <Link href="#technologies">
+        <Link href="#technologies" >
           <NavLink>Technologies</NavLink>
         </Link>
       </li>
       <li>
-        <Link href="#about">
+        <Link href="#about" >
          <NavLink>About</NavLink>
+        </Link>
+      </li>
+      <li>
+        <Link href="#about">
+         <NavLink>Contact</NavLink>
         </Link>
       </li>
     </Div2>

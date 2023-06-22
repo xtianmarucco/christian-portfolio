@@ -25,7 +25,7 @@ const NavLink = styled(motion.li)`
 
   a {
     text-decoration: none;
-    color: #444;
+    color: #fff;
     font-size: 20px;
     transition: all 200ms ease-in-out;
   }
@@ -37,17 +37,7 @@ const NavLink = styled(motion.li)`
   }
 `;
 
-const variants = {
-  show: {
-    transform: "translateX(0em)",
-    opacity: 1,
-  },
-  hide: {
-    transform: "translateX(5em)",
-    opacity: 0,
-  },
-};
-const TopContainer = styled.div`
+const TopContainer = styled(motion.div)`
   display: flex;
   width: 100%;
 `;
@@ -62,6 +52,17 @@ export const SocialIcons = styled.a`
     cursor: pointer;
   }
 `;
+const variants = {
+  show: {
+    transform: "translateX(0em)",
+    opacity: 1,
+  },
+  hide: {
+    transform: "translateX(5em)",
+    opacity: 0,
+  },
+};
+
 
 export function NavMenu({ isOpen }) {
   return (
@@ -81,7 +82,7 @@ export function NavMenu({ isOpen }) {
             },
           }}
         >
-          <a href="#">Home</a>
+          <a href="#">Projects</a>
         </NavLink>
         <NavLink
           initial={false}
@@ -97,23 +98,7 @@ export function NavMenu({ isOpen }) {
             },
           }}
         >
-          <a href="#">Products</a>
-        </NavLink>
-        <NavLink
-          initial={false}
-          animate={isOpen ? "show" : "hide"}
-          variants={{
-            show: {
-              ...variants.show,
-              transition: { delay: 0.5, duration: 0.2 },
-            },
-            hide: {
-              ...variants.hide,
-              transition: { delay: 0.15, duration: 0.05 },
-            },
-          }}
-        >
-          <a href="#">Key Benefits</a>
+          <a href="#">Technologies</a>
         </NavLink>
         <NavLink
           initial={false}
@@ -137,22 +122,6 @@ export function NavMenu({ isOpen }) {
           variants={{
             show: {
               ...variants.show,
-              transition: { delay: 0.7, duration: 0.2 },
-            },
-            hide: {
-              ...variants.hide,
-              transition: { delay: 0.25, duration: 0.05 },
-            },
-          }}
-        >
-          <a href="#">FAQ</a>
-        </NavLink>
-        <NavLink
-          initial={false}
-          animate={isOpen ? "show" : "hide"}
-          variants={{
-            show: {
-              ...variants.show,
               transition: { delay: 0.8, duration: 0.2 },
             },
             hide: {
@@ -164,17 +133,30 @@ export function NavMenu({ isOpen }) {
           <a href="#">Contact</a>
         </NavLink>
       </NavList>
-      <TopContainer>
-            <SocialIcons>
-              <AiFillGithub fill="#52d053" size="2.5rem"></AiFillGithub>
-            </SocialIcons>
-            <SocialIcons>
-              <AiFillLinkedin fill="#52d053" size="2.5rem"></AiFillLinkedin>
-            </SocialIcons>
-            <SocialIcons>
-              <AiFillInstagram fill="#52d053" size="2.5rem"></AiFillInstagram>
-            </SocialIcons>
-        </TopContainer>
+      <TopContainer
+        initial={false}
+        animate={isOpen ? "show" : "hide"}
+        variants={{
+          show: {
+            ...variants.show,
+            transition: { delay: 0.4, duration: 0.5 },
+          },
+          hide: {
+            ...variants.hide,
+            transition: { delay: 0.5, duration: 0.5 },
+          },
+        }}
+      >
+        <SocialIcons>
+          <AiFillGithub fill="#52d053" size="2.5rem"></AiFillGithub>
+        </SocialIcons>
+        <SocialIcons>
+          <AiFillLinkedin fill="#52d053" size="2.5rem"></AiFillLinkedin>
+        </SocialIcons>
+        <SocialIcons>
+          <AiFillInstagram fill="#52d053" size="2.5rem"></AiFillInstagram>
+        </SocialIcons>
+      </TopContainer>
     </NavMenuContainer>
   );
 }
