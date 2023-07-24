@@ -1,6 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import ButtonSmall from "../../styles/GlobalComponents/ButtonSmall";
 
 import {
   BlogCard,
@@ -63,9 +64,9 @@ const Projects = () => {
               <TitleContent title>
                 <HeaderThree>{title}</HeaderThree>
               </TitleContent>
-              <ToggleButton onClick={() => handleToggle(title)}>
+              <ButtonSmall onClick={() => handleToggle(title)}>
                 {isShown[title] ? "Hide Details" : "Show Details"}
-              </ToggleButton>
+              </ButtonSmall>
               <AnimatePresence>
                 {isShown[title] && (
                   <motion.div
