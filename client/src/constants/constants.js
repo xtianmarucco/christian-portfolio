@@ -6,7 +6,6 @@ export const projects = [
       tags: ['Mongo', 'Express', 'React', 'Node'],
     source: 'https://google.com',
     visit: 'https://devlights.com/',
-    id: 0,
   },
   {
     title: 'Movet website',
@@ -15,7 +14,6 @@ export const projects = [
     tags: ['Angular', 'TypeScript'],
     source: 'https://google.com',
     visit: 'https://google.com',
-    id: 1,
   },
   {
     title: 'IBJJF Score App',
@@ -24,7 +22,6 @@ export const projects = [
       tags: ['React'],
     source: 'https://google.com',
     visit: 'https://bjj-point-counter.vercel.app/',
-    id: 2,
   },
   // {
   //   title: 'Unichat',

@@ -2,9 +2,8 @@ import styled from 'styled-components';
 
 export const Img = styled.img`
   width:100%;
-  height:100%;
+  height:auto;
   object-fit: cover;
-  overflow: hidden;
   border-radius: 10px 10px 0px 0px;
 `
 
@@ -12,7 +11,7 @@ export const GridContainer = styled.section`
 display: grid;
 grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
 padding: 3rem;
-place-items: center;
+place-items: baseline;
 column-gap: 2rem;
 row-gap: 3rem;
 @media ${(props) => props.theme.breakpoints.sm} {
@@ -21,17 +20,10 @@ row-gap: 3rem;
   padding: 2rem;
   padding-bottom: 0;
 }
-
 `
-export const BlogCardWrapper = styled.div`
-/* Your default styles for BlogCard */
-  transition: transform 0.3s ease;
-  &:hover {
-    // transform: scale(1.1); /* Increase the scale to make the card larger on hover */
-  }
-`;
-
 export const BlogCard = styled.div`
+  overflow: hidden;
+  height: 100%;
   border-radius: 10px;
   box-shadow: 3px 3px 20px rgba(80, 78, 78, 0.5);
   text-align: center;
@@ -40,7 +32,12 @@ export const BlogCard = styled.div`
     width: 100%;
   }
 `;
-
+export const AnimatePresence  = styled.div`
+  width: 400px;
+  @media ${(props) => props.theme.breakpoints.sm} {
+    width: 100%;
+  }
+`;
 export const TitleContent = styled.div`
   text-align: center;
   z-index: 20;
@@ -48,7 +45,17 @@ export const TitleContent = styled.div`
 
 `;
 
-
+export const ToggleButton = styled.button`
+    width: auto;
+    height: 40px;
+    border-radius: 25px;
+    background-color: purple;
+    padding: 10px 20px;
+    color: white;
+    border-color: transparent;
+    margin-top: 10px;
+    margin-bottom: 10px;
+`
 export const HeaderThree = styled.h3`
   font-weight: 500;
   letter-spacing: 2px;

@@ -1,15 +1,15 @@
 import React from "react";
-import { useState } from "react";
-import { motion } from "framer-motion"
+import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 
 import {
-
   BlogCard,
+  AnimatePresence,
   CardInfo,
   ExternalLinks,
   GridContainer,
   HeaderThree,
-  Hr,
+  ToggleButton,
   Tag,
   TagList,
   TitleContent,
@@ -21,41 +21,76 @@ import {
   SectionDivider,
   SectionTitle,
 } from "../../styles/GlobalComponents";
-import { projects } from "../../constants/constants";
 
 const Projects = () => {
+  const [projects, setProjects] = useState([]);
+  useEffect(() => {
+    // Fetch data from the API route
+    fetch("/api/projects")
+      .then((response) => response.json())
+      .then((data) => setProjects(data))
+      .catch((error) => console.error("Error fetching data:", error));
+  }, []);
+  console.log(projects);
 
-  // const [isHovered, setIsHovered] = useState(false);
-
-  // const handleMouseEnter = () => {
-  //   setIsHovered(true);
-  // };
-
-  // const handleMouseLeave = () => {
-  //   setIsHovered(false);
-  // };
+  const [isShown, setIsShown] = useState({});
+  const handleToggle = (projectId) => {
+    setIsShown((prevIsShown) => ({
+      ...prevIsShown,
+      [projectId]: !prevIsShown[projectId],
+    }));
+  };
 
   return (
-    <Section nopadding id="projects" >
+    <Section nopadding id="projects">
       <SectionDivider></SectionDivider>
       <SectionTitle main>Projects</SectionTitle>
       <GridContainer>
-        {projects.map(({ image, title, description, id, tags }) => (
-            <BlogCard>
+        {projects.map(({ title, image, description, tags }) => (
+          <motion.div
+            key={title}
+            initial={{ opacity: 1 }} // Start with opacity 1 to avoid flickering on initial load
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 1, ease: "easeInOut" }}
+          >
+            <BlogCard
+              animate={{ height: isShown[title] ? "auto" : "500px" }}
+              initial={{ height: "500px" }}
+              transition={{ duration: 0.5, ease: "easeInOut" }}
+            >
               <Img src={image} />
               <TitleContent title>
                 <HeaderThree>{title}</HeaderThree>
               </TitleContent>
-              <Hr></Hr>
-            <CardInfo>{description}</CardInfo>
-            <TagList>
-              <Tag>{tags}</Tag>
-            </TagList>
+              <ToggleButton onClick={() => handleToggle(title)}>
+                {isShown[title] ? "Hide Details" : "Show Details"}
+              </ToggleButton>
+              <AnimatePresence>
+                {isShown[title] && (
+                  <motion.div
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{
+                      opacity: 0,
+                      y: 10,
+                      duration: 0.3,
+                      ease: "easeInOut",
+                    }}
+                    transition={{ duration: 0.75, ease: "easeInOut" }}
+                  >
+                    <CardInfo>{description}</CardInfo>
+                    <TagList>
+                      <Tag>{tags}</Tag>
+                    </TagList>
+                  </motion.div>
+                )}
+              </AnimatePresence>
             </BlogCard>
+          </motion.div>
         ))}
       </GridContainer>
     </Section>
   );
 };
-
 export default Projects;
