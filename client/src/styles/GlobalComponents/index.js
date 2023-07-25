@@ -272,10 +272,10 @@ export const ButtonBackSmall = styled.div`
   }
 
   @media ${(props) => props.theme.breakpoints.sm} {
-    width: 100%;
-    height: 32px;
+    width:130px;
+    height:32px;
     font-size: 14px;
-    margin-bottom: ${({ alt }) => alt ? '0' : '32px'};
+    margin-bottom: ${({ alt }) => alt ? '0' : '5px'};
   }
 `
 
@@ -322,6 +322,8 @@ export const ButtonFrontsmall = styled.button`
 
   @media ${(props) => props.theme.breakpoints.sm} {
     font-size: 14px;
+    width:130px;
+    height:32px;
   }
 `
 
