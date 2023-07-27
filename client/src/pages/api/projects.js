@@ -25,6 +25,14 @@ const projects = [
       source: 'https://google.com',
       visit: 'https://bjj-point-counter.vercel.app/',
     },
+    {
+      title: 'TypeScript To Do App',
+      description: "Built this to-do app to review and learn the basic TypeScript's concepts",
+      image: '/images/ts-todo.png',
+      tags: ['React', 'TypeScript', 'Tailwinds CSS'],
+      source: 'https://google.com',
+      visit: 'https://typescript-todo-mdslnjt75-xtianmarucco.vercel.a',
+    },
   ];
   
   export default function handler(req, res) {

@@ -1,5 +1,6 @@
 // import Acomplishments from "../components/Acomplishments/Acomplishments";
 // import BgAnimation from "../components/BackgrooundAnimation/BackgroundAnimation";
+import ContactMe from "../components/ContacMe/ContactMeSection";
 import Hero from "../components/Hero/Hero";
 import Projects from "../components/Projects/Projects";
 import Technologies from "../components/Technologies/Technologies";
@@ -17,6 +18,7 @@ const Home = () => {
       <Projects  />
       <Technologies />
       <Timeline />
+      <ContactMe/>
       {/* <Acomplishments /> */}
     </Layout>
   );
