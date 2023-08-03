@@ -1,69 +1,123 @@
-import { useState } from 'react';
+import { useState } from "react";
 
 const useContactForm = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: '',
-  });
+  // States for contact form fields
+  const [fullname, setFullname] = useState("");
+  const [email, setEmail] = useState("");
+  const [subject, setSubject] = useState("");
+  const [message, setMessage] = useState("");
 
-  const [submitted, setSubmitted] = useState(false);
+  // Open modal
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    console.log(formData)
-    setFormData((prevData) => ({
-      ...prevData,
-      [name]: value,
-    }));
+  const [showModal, setShowModal] = useState(false); // Initialize the modal state to false
+
+  //   Form validation state
+  const [errors, setErrors] = useState({});
+
+  //   Setting button text on form submission
+  const [buttonText, setButtonText] = useState("Send");
+
+  // Setting success or failure messages states
+  const [showSuccessMessage, setShowSuccessMessage] = useState(false);
+  const [showFailureMessage, setShowFailureMessage] = useState(false);
+
+  const handleClose = () => {
+    setShowModal(false);
   };
 
+  // Validation check method
+  const handleValidation = () => {
+    let tempErrors = {};
+    let isValid = true;
+
+    if (fullname.length <= 0) {
+      tempErrors["fullname"] = true;
+      isValid = false;
+    }
+
+    const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
+    if (!email) {
+      tempErrors["email"] = "required";
+      isValid = false;
+    } else if (!emailRegex.test(email)) {
+      tempErrors["email"] = "invalid";
+      isValid = false;
+    }
+
+
+    if (subject.length <= 0) {
+      tempErrors["subject"] = true;
+      isValid = false;
+    }
+    if (message.length <= 0) {
+      tempErrors["message"] = true;
+      isValid = false;
+    }
+
+    setErrors({ ...tempErrors });
+    return isValid;
+  };
+
+  // Handling form submit
   const handleSubmit = async (e) => {
-
     e.preventDefault();
-    setSubmitted(true);
 
-    // Validate the form data before submission
-    
-      if(!formData.message){
-        console.error('Please write your message.');
-        return;
-      }
-  
-      if (formData.name.length > 50) {
-        console.error('Name should not exceed 50 characters.');
-        return;
-        
-      }
-  
-      if (!/\S+@\S+\.\S+/.test(formData.email)) {
-        console.error('Please enter a valid email address.');
-        return;
-    
-      }
+    let isValidForm = handleValidation();
 
-    try {
-      const response = await fetch('/api/contact', {
-        method: 'POST',
+    if (isValidForm) {
+      setButtonText("Sending");
+      setShowModal(true);
+      const res = await fetch("/api/sendgrid", {
+        body: JSON.stringify({
+          email: email,
+          fullname: fullname,
+          subject: subject,
+          message: message,
+        }),
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
-        body: JSON.stringify(formData),
+        method: "POST",
       });
 
-      if (response.ok) {
-        console.log('Form submitted successfully!');
-        // Reset the form fields after successful submission
-        setFormData({ name: '', email: '', message: '' });
-      } else {
-        console.error('Form submission failed.');
+      const { error } = await res.json();
+      if (error) {
+        console.log(error);
+        setShowSuccessMessage(false);
+        setShowFailureMessage(true);
+        setButtonText("Send");
+        return;
       }
-    } catch (error) {
-      console.error('Error submitting the form:', error);
+      setFullname("");
+      setEmail("");
+      setSubject("");
+      setMessage("");
+      setShowSuccessMessage(true);
+      setShowFailureMessage(false);
+      setButtonText("Sent");
+      setShowModal(true);
+      
     }
   };
 
-  return { formData, handleChange, handleSubmit, submitted, };
+  return {
+    fullname,
+    setFullname,
+    email,
+    setEmail,
+    subject,
+    setSubject,
+    message,
+    setMessage,
+    errors,
+    buttonText,
+    showSuccessMessage,
+    showFailureMessage,
+    handleClose,
+    showModal,
+    handleSubmit,
+    handleValidation,
+  };
 };
 
 export default useContactForm;

@@ -9,69 +9,104 @@ import {
   Input,
   ErrMessage,
 } from "./ContactFormStyles";
+import ModalSuccess from "../Modal/ModalSuccess";
 
-const ContactForm = () => {
-  const { formData, handleChange, handleSubmit, errorMessage, submitted } =
-    useContactForm();
+function ContactForm() {
+  const {
+    fullname,
+    setFullname,
+    email,
+    setEmail,
+    subject,
+    setSubject,
+    message,
+    setMessage,
+    errors,
+    buttonText,
+    showModal,
+    showSuccessMessage,
+    showFailureMessage,
+    handleClose,
+    handleSubmit,
+    handleValidation,
+  } = useContactForm();
 
   return (
     <ContactFormWrapper>
       <form onSubmit={handleSubmit}>
         <InputContainer>
-          <label htmlFor="name">Name</label>
+          <label>Full name</label>
           <Input
-            autoFocus={true}
             type="text"
-            id="name"
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-            maxLength={50} // Maximum length for the name field
-            error={submitted && !formData.name}
-            required
+            value={fullname}
+            onBlur={handleValidation}
+            onChange={(e) => {
+              setFullname(e.target.value);
+            }}
+            name="fullname"
           />
-          {submitted &&
-            (!formData.name) && (
-              <ErrMessage>Please write your name.</ErrMessage>
-            )}
+           {errors["fullname"] && (
+            <ErrMessage>Please, write your name.</ErrMessage>  
+          )  }
         </InputContainer>
         <InputContainer>
-          <label htmlFor="email">Email</label>
+          <label>Email</label>
           <Input
-            autoFocus={true}
             type="email"
-            id="email"
             name="email"
-            value={formData.email}
-            onChange={handleChange}
-            required
-            error={submitted && !formData.email && (!/\S+@\S+\.\S+/.test(formData.email)) }
+            value={email}
+            onBlur={handleValidation}
+            onChange={(e) => {
+              setEmail(e.target.value);
+            }}
+            hasError={errors["email"] === "required" || errors["email"] === "invalid"} // Pass the hasError prop based on the presence of errors
           />
-          {submitted && (!/\S+@\S+\.\S+/.test(formData.email)) &&
-            (!formData.email) && (
-              <ErrMessage>Please a valid email adress.</ErrMessage> 
-            )}
-            {}
+           {errors["email"] === "required" && (
+            <ErrMessage> write your email, we won't share your info.</ErrMessage>
+          ) }
+          {errors["email"] === "invalid" && (
+            <ErrMessage>Invalid email format.</ErrMessage>
+          )}
         </InputContainer>
         <InputContainer>
-          <label htmlFor="message">Message</label>
-          <TextArea
-            autoFocus={true}
-            id="message"
-            name="message"
-            value={formData.message}
-            onChange={handleChange}
-            error={submitted && !formData.name}
-            required
+          <label>Subject</label>
+          <Input
+            type="text"
+            name="subject"
+            value={subject}
+            onBlur={handleValidation}
+            onChange={(e) => {
+              setSubject(e.target.value);
+            }}
           />
-          {submitted &&
-            (!formData.name || !formData.email || !formData.message) && (
-              <ErrMessage>Please fill in all fields.</ErrMessage>
-            )}
+              {errors["subject"] && (
+            <ErrMessage>Don't forget the subject.</ErrMessage>  
+          ) }
         </InputContainer>
-        <Button onClick={handleSubmit}>Submit</Button>
+        <InputContainer>
+          <label>Message</label>
+          <TextArea
+            type="text"
+            name="message"
+            value={message}
+            onBlur={handleValidation}
+            onChange={(e) => {
+              setMessage(e.target.value);
+            }}
+          ></TextArea>
+              {errors["message"] && (
+            <ErrMessage>Don't forget to write your message.</ErrMessage>  
+          )  }
+        </InputContainer>
+      <Button>{buttonText}</Button>
       </form>
+
+      {showModal && (
+        <ModalSuccess onClick={handleClose} /> // Replace YourModalComponent with your actual modal component
+      )}
     </ContactFormWrapper>
+    
+     
   );
-};
+}
 export default ContactForm;

@@ -33,8 +33,6 @@ export const Input = styled.input`
   border: white 2px solid;
   padding: 5px 15px 5px 15px;
   color: white;
-  border: 1px solid ${(props) => (props.error ? 'red' : 'white')};
-
 `;
 export const TextArea = styled.textarea`
   border-radius: 15px;
@@ -44,8 +42,6 @@ export const TextArea = styled.textarea`
   border: white 2px solid;
   padding: 10px 15px 5px 15px;
   color: white;
-  border: 1px solid ${(props) => (props.error ? 'red' : 'white')};
-
 `;
 
 export const ErrMessage = styled.p`
