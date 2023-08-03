@@ -9,7 +9,7 @@ const useContactForm = () => {
 
   // Open modal
 
-  const [showModal, setShowModal] = useState(false); // Initialize the modal state to false
+  const [showModal, setShowModal] = useState(true); // Initialize the modal state to false
 
   //   Form validation state
   const [errors, setErrors] = useState({});

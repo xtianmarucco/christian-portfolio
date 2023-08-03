@@ -23,6 +23,10 @@ padding: 20px;
 border-radius: 8px;
 box-shadow: 0 2px 8px #e2e4e97d;
 height: 20%;
+@media (max-width: 810px) {
+  width: 90%;
+}
+
 &:hover {
   cursor: pointer;
   }
@@ -32,9 +36,27 @@ height: 20%;
 
 export const ModalTitle = styled.h2`
   margin-right: 10px;
+
+  @media (max-width: 810px) {
+    text-align:center;
+  }
+ 
 `;
 
 export const MessageContainer = styled.div`
 display:flex;
 flex-direction: row:
+
+@media (max-width: 810px) {
+  display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+@media (max-width: 450px) {
+  display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+}
 `;
