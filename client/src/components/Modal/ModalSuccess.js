@@ -17,6 +17,22 @@ const ModalSuccess = () => {
     setShowModal(false);
   };
 
+  const [isHovering, setIsHovering] = useState(false);
+  const [message, setMessage] = useState("Message sent successfully!");
+
+  const handleMouseEnter = () => {
+    setIsHovering(true);
+    setMessage("Click here to close the window");
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovering(false);
+    setMessage("Message sent successfully!");
+  };
+
+
+
+
   return (
     <>
       {showModal && (
@@ -27,9 +43,11 @@ const ModalSuccess = () => {
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.5, opacity: 0 }}
               onClick={handleClose}
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
             >
               <MessageContainer>
-                <ModalTitle>Message sent successfully!</ModalTitle>
+                <ModalTitle>{message}</ModalTitle>
                 <BsEnvelopeCheck
                   fill="rgb(82, 208, 83)"
                   size="2em"

@@ -23,6 +23,9 @@ padding: 20px;
 border-radius: 8px;
 box-shadow: 0 2px 8px #e2e4e97d;
 height: 20%;
+&:hover {
+  cursor: pointer;
+  }
 
 }
 `;

@@ -15,6 +15,7 @@ import {
   TagList,
   TitleContent,
   UtilityList,
+  MoreButton,
   Img,
 } from "./ProjectsStyles";
 import {
@@ -64,9 +65,9 @@ const Projects = () => {
               <TitleContent title>
                 <HeaderThree>{title}</HeaderThree>
               </TitleContent>
-              <ButtonSmall onClick={() => handleToggle(title)}>
+              <MoreButton onClick={() => handleToggle(title)}>
                 {isShown[title] ? "Hide Details" : "Show Details"}
-              </ButtonSmall>
+              </MoreButton>
               <AnimatePresence>
                 {isShown[title] && (
                   <motion.div

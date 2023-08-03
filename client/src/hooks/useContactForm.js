@@ -88,14 +88,15 @@ const useContactForm = () => {
         setButtonText("Send");
         return;
       }
-      setFullname("");
-      setEmail("");
-      setSubject("");
-      setMessage("");
+     
       setShowSuccessMessage(true);
       setShowFailureMessage(false);
       setButtonText("Sent");
       setShowModal(true);
+      setFullname("");
+      setEmail("");
+      setSubject("");
+      setMessage("");
       
     }
   };
