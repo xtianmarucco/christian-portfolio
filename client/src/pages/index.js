@@ -9,33 +9,30 @@ import ScrollButton from "../components/ScrollButton/ScrollButton";
 import { Layout } from "../layout/Layout";
 import { Section } from "../styles/GlobalComponents";
 import BgAnimation from "../components/BackgrooundAnimation/BackgroundAnimation";
-import { motion, useAnimation } from "framer-motion";
-
+import useSmoothScroll from "../hooks/useScroll";
 const Home = () => {
-  // const controls = useAnimation();
 
-  // const handleScrollToSection = (sectionId) => {
-  //   const sectionElement = document.getElementById(sectionId);
-  //   if (sectionElement) {
-  //     controls.start({
-  //       y: sectionElement.offsetTop - 50, // You can adjust the offset to fit your layout
-  //       transition: { duration: 0.6, ease: "easeInOut" },
-  //     });
-  //   }
-  // };
+  const  { scrollToSection }  = useSmoothScroll;
+  
   return (
     <Layout>
       <Section>
         <Hero />
         {/* <BgAnimation /> */}
       </Section>
-      <Projects id="projects" />
-      <Technologies id="technologies" />
-      <Timeline id="timeline" />
-      <ContactMe id="contact" />
+    
+        <Projects />
+      
+     
+        <Technologies />
+      
+        <Timeline />
+     
+        <ContactMe />
+      
+
       {/* <Acomplishments /> */}
       <ScrollButton />
-
     </Layout>
   );
 };

@@ -8,6 +8,8 @@ import {
   TextArea,
   Input,
   ErrMessage,
+  Label,
+
 } from "./ContactFormStyles";
 import ModalSuccess from "../Modal/ModalSuccess";
 
@@ -35,7 +37,7 @@ function ContactForm() {
     <ContactFormWrapper>
       <form onSubmit={handleSubmit}>
         <InputContainer>
-          <label>Full name</label>
+          <Label>Full name</Label>
           <Input
             type="text"
             value={fullname}
@@ -50,7 +52,7 @@ function ContactForm() {
           )  }
         </InputContainer>
         <InputContainer>
-          <label>Email</label>
+          <Label>Email</Label>
           <Input
             type="email"
             name="email"
@@ -69,7 +71,7 @@ function ContactForm() {
           )}
         </InputContainer>
         <InputContainer>
-          <label>Subject</label>
+          <Label>Subject</Label>
           <Input
             type="text"
             name="subject"
@@ -84,7 +86,7 @@ function ContactForm() {
           ) }
         </InputContainer>
         <InputContainer>
-          <label>Message</label>
+          <Label>Message</Label>
           <TextArea
             type="text"
             name="message"

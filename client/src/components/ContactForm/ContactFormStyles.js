@@ -24,13 +24,17 @@ export const InputContainer = styled.div`
   width: auto;
 `;
 
+export const Label = styled.label`
+color: rgba(255,255,255,0.5);
+`;
+
 export const Input = styled.input`
   border-radius: 15px;
   height: 40px;
   width: auto;
   margin: 1rem 0 2rem 0;
   background-color: #0f1624 !important;
-  border: white 2px solid;
+  border: rgba(255,255,255,0.5) 2px solid;
   padding: 5px 15px 5px 15px;
   color: white;
 `;
@@ -39,7 +43,7 @@ export const TextArea = styled.textarea`
   height: 100px;
   margin: 1rem 0 2rem 0;
   background-color: transparent;
-  border: white 2px solid;
+  border: rgba(255,255,255,0.5) 2px solid;
   padding: 10px 15px 5px 15px;
   color: white;
 `;
