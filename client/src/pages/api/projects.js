@@ -26,7 +26,7 @@ const projects = [
     image: "/images/moviesdb.png",
     tags: ["ReactJS", "  water css"],
     source: "https://google.com",
-    visit: "https://vercel.com/xtianmarucco/movie-search",
+    visit: "https://movie-search-taupe-alpha.vercel.app/",
   },
   {
     title: "Movet website",
