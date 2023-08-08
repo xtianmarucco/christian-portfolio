@@ -10,26 +10,24 @@ import { Layout } from "../layout/Layout";
 import { Section } from "../styles/GlobalComponents";
 import BgAnimation from "../components/BackgrooundAnimation/BackgroundAnimation";
 import useSmoothScroll from "../hooks/useScroll";
+import HeroImg from "../components/HeroImg/HeroImg";
 const Home = () => {
+  const { scrollToSection } = useSmoothScroll;
 
-  const  { scrollToSection }  = useSmoothScroll;
-  
   return (
     <Layout>
-      <Section>
+      <Section flex row >
         <Hero />
-        {/* <BgAnimation /> */}
+        <HeroImg />
       </Section>
-    
-        <Projects />
-      
-     
-        <Technologies />
-      
-        <Timeline />
-     
-        <ContactMe />
-      
+
+      <Projects />
+
+      <Technologies />
+
+      <Timeline />
+
+      <ContactMe />
 
       {/* <Acomplishments /> */}
       <ScrollButton />

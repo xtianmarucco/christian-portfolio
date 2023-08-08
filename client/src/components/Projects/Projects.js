@@ -1,6 +1,8 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import Link from "next/link";
+
 import ButtonSmall from "../../styles/GlobalComponents/ButtonSmall";
 
 import {
@@ -44,11 +46,11 @@ const Projects = () => {
   };
 
   return (
-    <Section  id="projects">
+    <Section id="projects">
       <SectionDivider></SectionDivider>
       <SectionTitle main>Projects</SectionTitle>
       <GridContainer>
-        {projects.map(({ title, image, description, tags }) => (
+        {projects.map(({ title, image, description, tags, visit }) => (
           <motion.div
             key={title}
             initial={{ opacity: 1 }} // Start with opacity 1 to avoid flickering on initial load
@@ -61,7 +63,10 @@ const Projects = () => {
               initial={{ height: "500px" }}
               transition={{ duration: 0.5, ease: "easeInOut" }}
             >
-              <Img src={image} />
+              <Link href={visit}>
+                <Img src={image} />
+              </Link>
+
               <TitleContent title>
                 <HeaderThree>{title}</HeaderThree>
               </TitleContent>

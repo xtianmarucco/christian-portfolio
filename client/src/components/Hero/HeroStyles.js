@@ -10,7 +10,7 @@ width:100%;
 `;
 
 export const LeftSection = styled.div`
-  width: 70%;
+  width: auto;
   @media ${(props) => props.theme.breakpoints.sm} {
     width: auto;
     display: flex;

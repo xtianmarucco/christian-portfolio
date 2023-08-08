@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const Img = styled.img`
-  max-width: 300px;
+  max-width: 320px;
   max-height: 240px;
   margin: auto;
 
@@ -16,9 +16,7 @@ const HeroImg = () => {
   return (
     <Img
       src="/images/asd.png"
-      width={300}
-      height={240}
-      layout="responsive"
+
       alt="Me Coding"
     />
   );

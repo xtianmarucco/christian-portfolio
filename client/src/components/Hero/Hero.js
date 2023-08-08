@@ -8,14 +8,13 @@ import {
 } from "../../styles/GlobalComponents";
 import Button from "../../styles/GlobalComponents/Button";
 import { LeftSection } from "./HeroStyles";
-import useSmoothScroll from "../../hooks/useScroll";
-import HeroImg from "../HeroImg/HeroImg";
+import useSmoothScroll from "../../hooks/useScroll";;
 
 const Hero = (props) => {
   const { scrollToSection } = useSmoothScroll;
 
   return (
-    <Section flex row nopadding>
+    <Section >
       <LeftSection>
         <SectionTitle>I'm Christian, welcome to my portfolio. </SectionTitle>
         <SectionText>
@@ -29,7 +28,7 @@ const Hero = (props) => {
 
        
       </LeftSection>
-      <HeroImg></HeroImg>
+
     </Section>
   );
 };
