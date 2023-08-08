@@ -1,9 +1,18 @@
 import styled from 'styled-components';
 
+
+export const SectionHero = styled.div`
+display: flex;
+flex-direction:row;
+width:100%;
+
+
+`;
+
 export const LeftSection = styled.div`
-  width: 100%;
+  width: 70%;
   @media ${(props) => props.theme.breakpoints.sm} {
-    width: 80%;
+    width: auto;
     display: flex;
     flex-direction: column;
 
@@ -16,4 +25,10 @@ export const LeftSection = styled.div`
 
     margin: 0 auto;
   }
+`;
+
+
+export const Image = styled.img`
+  width: 50%;
+  height: auto;
 `;

@@ -1,18 +1,37 @@
-import React from 'react';
+import React from "react";
+import Link from "next/link";
+import {
+  SectionText,
+  SectionTitle,
+  Section,
+  
+} from "../../styles/GlobalComponents";
+import Button from "../../styles/GlobalComponents/Button";
+import { LeftSection } from "./HeroStyles";
+import useSmoothScroll from "../../hooks/useScroll";
+import HeroImg from "../HeroImg/HeroImg";
 
-import { Section, SectionText, SectionTitle } from '../../styles/GlobalComponents';
-import Button from '../../styles/GlobalComponents/Button';
-import { LeftSection } from './HeroStyles';
+const Hero = (props) => {
+  const { scrollToSection } = useSmoothScroll;
 
-const Hero = (props) => (
-<Section row nopadding>
-  <LeftSection>
-    <SectionTitle>Hi, I'm Christian, welcome to my portfolio. </SectionTitle>
-    <SectionText>Experienced and reliable front-end developer with design skills, dedicated to delivering exceptional web solutions. Trustworthy and committed to results. Let's create an outstanding digital experience together.</SectionText>
-    <Button  onClick={()=> window.location = "www.google.com"} >Learn more</Button>
-  </LeftSection>
+  return (
+    <Section flex row nopadding>
+      <LeftSection>
+        <SectionTitle>I'm Christian, welcome to my portfolio. </SectionTitle>
+        <SectionText>
+          Experienced front-end developer with design skills, dedicated to
+          delivering exceptional web solutions. Trustworthy and committed to
+          results. Let's create an outstanding digital experience together.
+        </SectionText>
+        <Link href="#about" onClick={() => scrollToSection("about")}>
+          <Button>Learn more</Button>
+        </Link>
 
-</Section>
-);
+       
+      </LeftSection>
+      <HeroImg></HeroImg>
+    </Section>
+  );
+};
 
 export default Hero;

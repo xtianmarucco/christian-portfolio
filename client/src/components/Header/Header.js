@@ -29,29 +29,29 @@ const  { scrollToSection }  = useSmoothScroll;
         </Link>
       </Div1>
       <Div2>
-        <li>
+        <>
           <Link href="#projects" onClick={() => scrollToSection("projects")}>
             <NavLink>Projects</NavLink>
           </Link>
-        </li>
-        <li>
+        </>
+        <>
           <Link
             href="#technologies"
             onClick={() => scrollToSection("technologies")}
           >
             <NavLink>Technologies</NavLink>
           </Link>
-        </li>
-        <li>
+        </>
+        <>
           <Link href="#about" onClick={() => scrollToSection("about")}>
             <NavLink>About</NavLink>
           </Link>
-        </li>
-        <li>
+        </>
+        <>
           <Link href="#contact" onClick={() => scrollToSection("contact")}>
             <NavLink>Contact</NavLink>
           </Link>
-        </li>
+        </>
       </Div2>
       <Div3>
         <SocialIcons>

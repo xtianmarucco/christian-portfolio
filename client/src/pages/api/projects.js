@@ -3,17 +3,17 @@
 const projects = [
     {
       title: 'Devlights website',
-      description: "Using React, Node.js, Express & MongoDB you'll learn how to build a Full Stack MERN Application - from start to finish. The App is called Memories and it is a simple social media app that allows users to post interesting events that happened in their lives.",
+      description: "This project was a very important milestone for me cause after working on small projects I was designated to work on the new site for the company.",
       image: './images/img1.png',
-      tags: ['Mongo', 'Express', 'React', 'Node'],
+      tags: [ 'Express ', ' React', ' Node'],
       source: 'https://google.com',
       visit: 'https://devlights.com/',
     },
     {
       title: 'Movet website',
-      description:"While building it you're going to learn many advanced React & JavaScript topics, as well as how to use Stripe for card transactions. On top of that, at the end of the video, you will have this unique and complex webshop app that you will be able to add to your portfolio. And trust me, e-commerce applications are impressive.",
+      description:" I built this landing page and registration system using Angular and TypeScript. this was the first step to Register as a user for a Pet Care service that offers general health services for pets.",
       image: '/images/img2.png',
-      tags: ['Angular', 'TypeScript'],
+      tags: ['Angular', ' TypeScript'],
       source: 'https://google.com',
       visit: 'https://google.com',
     },
@@ -27,9 +27,9 @@ const projects = [
     },
     {
       title: 'TypeScript To Do App',
-      description: "Built this to-do app to review and learn the basic TypeScript's concepts",
+      description: "Built this to-do app to review and learn Tailwinds and the basic TypeScript's concepts, like static typing, interfaces, classes, generics, tooling and IDE support.",
       image: '/images/ts-todo.png',
-      tags: ['React', 'TypeScript', 'Tailwinds CSS'],
+      tags: ['React ', ' TypeScript', ' Tailwinds CSS'],
       source: 'https://google.com',
       visit: 'https://typescript-todo-mdslnjt75-xtianmarucco.vercel.a',
     },

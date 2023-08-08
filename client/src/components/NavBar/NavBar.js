@@ -19,6 +19,7 @@ const NavbarContainer = styled.div`
     align-items: center;
     padding: 1rem;
     padding-top: 2rem;
+    
   }
 `;
 
