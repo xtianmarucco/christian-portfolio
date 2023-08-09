@@ -1,6 +1,8 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import Link from "next/link";
+
 import ButtonSmall from "../../styles/GlobalComponents/ButtonSmall";
 
 import {
@@ -15,12 +17,14 @@ import {
   TagList,
   TitleContent,
   UtilityList,
+  MoreButton,
   Img,
 } from "./ProjectsStyles";
 import {
   Section,
   SectionDivider,
   SectionTitle,
+  SectionText,
 } from "../../styles/GlobalComponents";
 
 const Projects = () => {
@@ -43,11 +47,12 @@ const Projects = () => {
   };
 
   return (
-    <Section nopadding id="projects">
+    <Section id="projects">
       <SectionDivider></SectionDivider>
       <SectionTitle main>Projects</SectionTitle>
+      <SectionText>Here you can check some of my work, though you can visit GitHub profile to see more. There are more to come...</SectionText>
       <GridContainer>
-        {projects.map(({ title, image, description, tags }) => (
+        {projects.map(({ title, image, description, tags, visit }) => (
           <motion.div
             key={title}
             initial={{ opacity: 1 }} // Start with opacity 1 to avoid flickering on initial load
@@ -60,13 +65,16 @@ const Projects = () => {
               initial={{ height: "500px" }}
               transition={{ duration: 0.5, ease: "easeInOut" }}
             >
-              <Img src={image} />
+              <Link href={visit}>
+                <Img src={image} />
+              </Link>
+
               <TitleContent title>
                 <HeaderThree>{title}</HeaderThree>
               </TitleContent>
-              <ButtonSmall onClick={() => handleToggle(title)}>
+              <MoreButton onClick={() => handleToggle(title)}>
                 {isShown[title] ? "Hide Details" : "Show Details"}
-              </ButtonSmall>
+              </MoreButton>
               <AnimatePresence>
                 {isShown[title] && (
                   <motion.div

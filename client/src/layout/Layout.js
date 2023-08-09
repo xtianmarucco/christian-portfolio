@@ -1,18 +1,25 @@
-import React from 'react'
+import React from "react";
 
-import Footer from '../components/Footer/Footer'
-import { Container } from './LayoutStyles'
-import { Navbar } from '../components/NavBar/NavBar'
-import Header from '../components/Header/Header'
+import useSmoothScroll from "../hooks/useScroll";
+
+import Footer from "../components/Footer/Footer";
+import { Container } from "./LayoutStyles";
+import NavigationBar from "../components/NavigationBar/NavigationBar";
+import { Navbar } from "../components/NavBar/NavBar";
+import Header from "../components/Header/Header";
+
+export const Layout = ({ children }) => {
+  const  { scrollToSection }  = useSmoothScroll;
 
 
-export const Layout = ({children}) => {
   return (
-    <Container>
-      <Header></Header>
-      <Navbar></Navbar>
-     <main>{children}</main> 
-     <Footer/>
+    
+    <Container> 
+      <Header/>
+      <Navbar/>
+      {/* <NavigationBar />     */}
+      <main>{children}</main>
+      <Footer />
     </Container>
-  )
-}
+  );
+};

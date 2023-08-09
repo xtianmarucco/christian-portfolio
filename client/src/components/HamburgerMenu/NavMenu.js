@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { AiFillGithub, AiFillInstagram, AiFillLinkedin } from "react-icons/ai";
 import React from "react";
+import useSmoothScroll from "../../hooks/useScroll";
 import styled from "styled-components";
 
 const NavMenuContainer = styled.div`
@@ -65,10 +66,14 @@ const variants = {
 
 
 export function NavMenu({ isOpen }) {
+
+  const  { scrollToSection }  = useSmoothScroll;
+
   return (
     <NavMenuContainer>
       <NavList>
         <NavLink
+          onClick={() => scrollToSection("projects")}
           initial={false}
           animate={isOpen ? "show" : "hide"}
           variants={{
@@ -82,7 +87,7 @@ export function NavMenu({ isOpen }) {
             },
           }}
         >
-          <a href="#">Projects</a>
+          <a href="#projects">Projects</a>
         </NavLink>
         <NavLink
           initial={false}
@@ -98,7 +103,7 @@ export function NavMenu({ isOpen }) {
             },
           }}
         >
-          <a href="#">Technologies</a>
+          <a href="#technologies">Technologies</a>
         </NavLink>
         <NavLink
           initial={false}
@@ -113,8 +118,9 @@ export function NavMenu({ isOpen }) {
               transition: { delay: 0.2, duration: 0.05 },
             },
           }}
+          onClick={() => scrollToSection("about")}
         >
-          <a href="#">About</a>
+          <a href="#about">About</a>
         </NavLink>
         <NavLink
           initial={false}
@@ -129,8 +135,9 @@ export function NavMenu({ isOpen }) {
               transition: { delay: 0.3, duration: 0.05 },
             },
           }}
+          onClick={() => scrollToSection("contact")}
         >
-          <a href="#">Contact</a>
+          <a href="#contact">Contact</a>
         </NavLink>
       </NavList>
       <TopContainer
@@ -147,13 +154,13 @@ export function NavMenu({ isOpen }) {
           },
         }}
       >
-        <SocialIcons>
+        <SocialIcons href="https://github.com/xtianmarucco">
           <AiFillGithub fill="#52d053" size="2.5rem"></AiFillGithub>
         </SocialIcons>
-        <SocialIcons>
+        <SocialIcons href="https://www.linkedin.com/in/christian-nicolas-gonzalez-847689181/">
           <AiFillLinkedin fill="#52d053" size="2.5rem"></AiFillLinkedin>
         </SocialIcons>
-        <SocialIcons>
+        <SocialIcons href="https://www.linkedin.com/in/christian-nicolas-gonzalez-847689181/">
           <AiFillInstagram fill="#52d053" size="2.5rem"></AiFillInstagram>
         </SocialIcons>
       </TopContainer>

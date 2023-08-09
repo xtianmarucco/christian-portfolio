@@ -18,7 +18,7 @@ const Footer = () => {
       </LinkColumn>
       </LinkList>
       <SocialIconsContainer>
-        <CompanyContainer>Let's work togheter</CompanyContainer>
+        <CompanyContainer> Design and built by Christian Marucco</CompanyContainer>
         <SocialContainer>
         <SocialIcons>
         <AiFillGithub fill="#52d053" size="2.5rem"></AiFillGithub>
