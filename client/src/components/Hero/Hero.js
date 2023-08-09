@@ -14,7 +14,7 @@ const Hero = (props) => {
   const { scrollToSection } = useSmoothScroll;
 
   return (
-    <Section >
+    <Section nopadding >
       <LeftSection>
         <SectionTitle>I'm Christian, welcome to my portfolio. </SectionTitle>
         <SectionText>

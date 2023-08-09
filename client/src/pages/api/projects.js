@@ -22,7 +22,7 @@ const projects = [
   {
     title: "Movie Database",
     description:
-      "I built this this little app to apply and and practice some ReactJs good practices, give a try to WATER CSS and master the use of useMemo, useCallback y useRef hooks from ReactJS, though it's still work in progress.",
+      "I built this this little app to apply and and practice some ReactJs good practices, give a try to WATER CSS and master the use of useMemo, useCallback and useRef hooks from ReactJS, though it's still work in progress.",
     image: "/images/moviesdb.png",
     tags: ["ReactJS", "  water css"],
     source: "https://google.com",

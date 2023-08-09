@@ -24,6 +24,7 @@ import {
   Section,
   SectionDivider,
   SectionTitle,
+  SectionText,
 } from "../../styles/GlobalComponents";
 
 const Projects = () => {
@@ -49,6 +50,7 @@ const Projects = () => {
     <Section id="projects">
       <SectionDivider></SectionDivider>
       <SectionTitle main>Projects</SectionTitle>
+      <SectionText>Here you can check some of my work, though you can visit GitHub profile to see more. There are more to come...</SectionText>
       <GridContainer>
         {projects.map(({ title, image, description, tags, visit }) => (
           <motion.div

@@ -5,8 +5,8 @@ export const Container = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 1rem;
-  padding-top: 2rem;
+  padding: 2rem 5rem;
+  
   font-size: 2rem;
   line-height: 32px;
   color: rgba(255, 255, 255, 0.75);

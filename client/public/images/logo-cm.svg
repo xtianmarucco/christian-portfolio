@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 27.7.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 476.03 410.16" style="enable-background:new 0 0 476.03 410.16;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#101725;}
+	.st1{fill:#66BD53;}
+	.st2{fill:url(#SVGID_1_);}
+	.st3{fill:#7058A5;}
+	.st4{fill:none;}
+</style>
+<rect class="st0" width="476.03" height="410.16"/>
+<path class="st1" d="M222.21,53.63l-0.16,71.41c0,0-0.12-10.17-6.03-25.55c-1.99-5.18-6.58-15.55-15.17-25.01
+	c-14.68-16.16-28.71-20.66-28.71-20.66L222.21,53.63z"/>
+<path class="st1" d="M53.63,53.63l0.16,71.41c0,0,0.12-10.17,6.03-25.55c1.99-5.18,6.58-15.55,15.17-25.01
+	c14.68-16.16,28.71-20.66,28.71-20.66L53.63,53.63z"/>
+<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="173.5869" y1="362.6247" x2="243.0655" y2="302.3615">
+	<stop  offset="0.1295" style="stop-color:#66BD53"/>
+	<stop  offset="0.1739" style="stop-color:#60B463"/>
+	<stop  offset="0.268" style="stop-color:#4EA087"/>
+	<stop  offset="0.403" style="stop-color:#2F83AD"/>
+	<stop  offset="0.4626" style="stop-color:#1C75BC"/>
+	<stop  offset="0.6764" style="stop-color:#6062AC"/>
+	<stop  offset="0.7874" style="stop-color:#7058A5"/>
+</linearGradient>
+<path class="st2" d="M222.82,353.8l0.13-67.87c0,0-0.18,9.67-6.81,24.26c-2.23,4.91-7.37,14.75-16.94,23.69
+	c-16.35,15.29-31.94,19.49-31.94,19.49L222.82,353.8z"/>
+<path class="st1" d="M53.93,354.8l0.15-66.52c0,0,0.11,9.48,5.48,23.8c1.81,4.82,5.98,14.49,13.78,23.3
+	c13.33,15.05,26.07,19.25,26.07,19.25L53.93,354.8z"/>
+<path class="st3" d="M168.88,227.83l0.59,39.41c0,0-2.84,15.13-9.78,21.93c-9.95,9.74-23.13,8.95-24,8.89
+	c-1.81-0.14-12.43-1.11-19.85-9.48c-4.67-5.27-7.41-21.04-7.41-21.04s-2.29-17.2-1.51-29.58c0.52-50.38,1.66-88.22,2.4-104.64
+	c0.17-3.81,0.62-11.4,5.93-17.19c6.05-6.6,15.17-7.3,20.44-7.7c5.19-0.4,18.29-1.46,25.78,6.81c5.63,6.22,5.63,18.07,5.63,18.07
+	l0.59,40.59l54.22-0.3l0.3,54.81L168.88,227.83z"/>
+<polygon class="st3" points="305.51,53.63 352.18,252 399.73,53.63 "/>
+<polygon class="st1" points="278.96,353.8 278.96,165.33 322.95,339.55 379.84,340 420.29,167.99 420.29,353.8 "/>
+<line class="st4" x1="247.69" y1="353.8" x2="247.69" y2="53.63"/>
+</svg>
