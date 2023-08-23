@@ -69,7 +69,7 @@ const Timeline = () => {
       <SectionDivider></SectionDivider>
       <SectionTitle main>About Me</SectionTitle>
       <SectionText>
-        I'm from Argentina, I'm 35 years old, I live in Resistencia, Chaco. I'm
+        I'm from Argentina, I'm 36 years old, I live in Resistencia, Chaco. I'm
         a passionate person who loves technology, music, and sports. I consider
         myself an easygoing person who likes to meet new people and places. I'm
         a self-taught person, who has always been driven by curiosity and I'm
