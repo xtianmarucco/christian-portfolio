@@ -10,7 +10,7 @@ const Technologies = () =>  (
     <SectionDivider></SectionDivider>
     <br></br>
     <SectionTitle main>Technologies</SectionTitle>
-    <SectionText>I've worked with a wide range of front-end technologies during my carrer and that provided me not only experience and knowledge but the ability to make the right choices regarding the development process</SectionText>
+    <SectionText>I've worked with a wide range of front-end technologies during my carrer and that provided me not only experience and knowledge but the ability to make the right choices regarding the development process.</SectionText>
     <List>
       <ListItem>
         <DiReact fill="#52d053"  size="4rem"></DiReact>
