@@ -39,5 +39,5 @@ export const TimeLineData = [
   { year: 2018, text: 'Started as a trainee at Circulo Agencia', },
   { year: 2019, text: 'Landed my first full-time gig as a front-end developer at Devlights', },
   { year: 2021, text: 'Started working at Baufest on a FinTech project', },
-  { year: 2023, text: 'Working as freelance developer, building themes and templates, landing pages, SEO and analytics', },
+  { year: 2023, text: 'Front-end Developer DAP Specialist for Kaseya', },
 ];
