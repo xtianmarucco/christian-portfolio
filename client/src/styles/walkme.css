@@ -1,0 +1,39 @@
+.walkme-custom-balloon-inner-div{
+    padding: 0px;
+    margin: 0px;
+    vertical-align: baseline;
+    border-collapse: inherit;
+    background: none rgb(255, 255, 255);
+    border-spacing: 1px;
+    line-height: normal;
+    height: auto;
+    text-indent: inherit;
+    letter-spacing: normal;
+    text-transform: none;
+    width: auto;
+    box-shadow: none;
+    text-shadow: none;
+    position: static;
+    top: auto;
+    left: auto;
+    transition: none 0s ease 0s;
+    direction: ltr;
+    border: 1px solid rgb(198, 198, 198);
+    border-radius: 5px;
+}
+:host, :root, body {
+    --itc-primary-color: #0064CC;
+    --itc-primary-hover-color: #004FA6;
+    --itc-kas: #004FA9;
+    --rocker-button-selector-color: #0064CC;
+    --itc-secondary-border-color: #cccccc;
+    --spinner-color: 0, 100, 204;
+    --itc-primary-20-color: rgba(0, 100, 204, .2);
+    --itc-tab-active-text-color: #0064CC;
+    --tab-active-border-color: #0064CC;
+    --itc-form-element-hover-border-color: #999;
+    --itc-dropdown-item-selected-color: rgba(0, 100, 204, .15);
+}
+#walkme-menu.walkme-penguin .walkme-main{
+    border-left-color:#0064CC !important;
+}

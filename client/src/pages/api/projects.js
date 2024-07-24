@@ -2,6 +2,14 @@
 
 const projects = [
   {
+    title: "Pao Designs Portfolio",
+    description:"I built this portfolio website for Paola Media, a UX/UI Designer from Australia. Working with her significantly enhanced my skills due to the complexity and originality of her designs. She wanted a distinctive way to showcase her work, and together we created something as unique as her projects.",
+    image: "/images/pao-design.png",
+    tags: ["React ", "Javascript ", "CSS"],
+    source: "https://google.com",
+    visit: "https://www.paolamedina.design/",
+  },
+  {
     title: "TypeScript To Do App",
     description:
       "Built this to-do app to review and learn Tailwinds and the basic TypeScript's concepts, like static typing, interfaces, classes, generics, tooling and IDE support.",
