@@ -63,7 +63,7 @@ const Header = () => {
         <SocialIcons href="https://github.com/xtianmarucco">
           <AiFillGithub fill="#52d053" size="2.5rem"></AiFillGithub>
         </SocialIcons>
-        <SocialIcons href="https://www.linkedin.com/in/christian-nicolas-gonzalez-847689181/">
+        <SocialIcons href="https://www.linkedin.com/in/christian-nicolas-gonzalez-847689181">
           <AiFillLinkedin fill="#52d053" size="2.5rem"></AiFillLinkedin>
         </SocialIcons>
         <SocialIcons href="https://www.instagram.com/xtianmarucco/">

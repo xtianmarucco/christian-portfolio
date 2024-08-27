@@ -20,13 +20,13 @@ const Footer = () => {
       <SocialIconsContainer>
         <CompanyContainer> Design and built by Christian Marucco</CompanyContainer>
         <SocialContainer>
-        <SocialIcons>
+        <SocialIcons  href="https://github.com/xtianmarucco">
         <AiFillGithub fill="#52d053" size="2.5rem"></AiFillGithub>
       </SocialIcons>
-      <SocialIcons>
+      <SocialIcons  href="https://www.linkedin.com/in/christian-marucco-gonzalez-847689181">
         <AiFillLinkedin fill="#52d053" size="2.5rem"></AiFillLinkedin>
       </SocialIcons>
-      <SocialIcons>
+      <SocialIcons href="https://www.instagram.com/xtianmarucco/">
         <AiFillInstagram fill="#52d053" size="2.5rem"></AiFillInstagram>
       </SocialIcons>
         </SocialContainer>

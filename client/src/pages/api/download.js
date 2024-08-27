@@ -2,7 +2,7 @@ import path from "path";
 import fs from "fs";
 
 export default function handler(req, res) {
-  const filePath = path.join(process.cwd(), "src", "download", "cvMaruccoGonzalezChristian.pdf");
+  const filePath = path.join(process.cwd(), "src", "download", "ChristianMaruccoGonzalezCV.pdf");
   const stat = fs.statSync(filePath);
 
   res.setHeader("Content-Length", stat.size);
